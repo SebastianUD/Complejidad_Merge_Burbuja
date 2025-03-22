@@ -9,8 +9,9 @@ def crear_array():
     print("1. Del 1 al 100")
     print("2. Del 1 al 1000")
     print("3. Del 1 al 10000")
+    print("4. Si desea introducir un numero especifico")
     
-    opcion = int(input("\nIngrese su opción (1, 2 o 3): "))
+    opcion = int(input("\nIngrese su opción (1, 2, 3 o 4): "))
     
     match opcion:
         case 1:
@@ -19,9 +20,12 @@ def crear_array():
             n = 1000
         case 3:
             n = 10000
+        case 4:
+            n = int(input("Introduzca el número: "))
         case _:
             print("Opción no válida. Se usará el rango del 1 al 100 por defecto.")
             n = 100
+     
 
     print("\nArray generado aleatoriamente sin ordenamiento:")
     while len(array) < n:
@@ -31,3 +35,4 @@ def crear_array():
     print(array)
     
     return array
+
