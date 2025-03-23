@@ -1,10 +1,12 @@
-import Random_Array as array
+import math
+from Random_Array import crear_array
 
 # Importar la función para crear un array aleatorio
-array.crear_array()
+array = crear_array()
 
 pasos = 0  # Contador de pasos
 
+# Crear el algoritmo Merge
 def merge_sort(arr):
     global pasos
     
@@ -47,10 +49,11 @@ def merge_sort(arr):
             pasos += 1  # Contar cada asignación
 
 # Ejecutar el algoritmo
-merge_sort(array.array)
+merge_sort(array)
 
 # Imprimir los resultados
 print("\nArray ordenado:")
-print(array.array)
+print(array,"\n")
 
-print("\nNúmero total de pasos:", pasos/2)
+print(f"Los pasos esperados segun la formula [f(n) = nlog(n)] son: {round(len(array)*(math.log2(len(array))),1)}")
+print("Número total de pasos:", pasos/2)

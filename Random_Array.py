@@ -25,8 +25,8 @@ def crear_array():
         case _:
             print("Opción no válida. Se usará el rango del 1 al 100 por defecto.")
             n = 100
-     
-
+    
+    # Mostrar el array desordenado
     print("\nArray generado aleatoriamente sin ordenamiento:")
     while len(array) < n:
         num = random.randint(1, n) 
@@ -34,5 +34,5 @@ def crear_array():
             array.append(num)
     print(array)
     
+    # Devolver el array anteriormente creado para usarse en los diferentes algoritmos
     return array
-
